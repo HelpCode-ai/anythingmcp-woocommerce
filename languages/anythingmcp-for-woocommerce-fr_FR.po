@@ -1,0 +1,215 @@
+# Copyright (C) 2026 helpcode.ai GmbH
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: AnythingMCP for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/anythingmcp-for-woocommerce\n"
+"Last-Translator: helpcode.ai GmbH <support@anythingmcp.com>\n"
+"Language-Team: helpcode.ai GmbH <support@anythingmcp.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-05T15:09:03+00:00\n"
+"PO-Revision-Date: 2026-11-05 15:09+0000\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: anythingmcp-for-woocommerce\n"
+
+#. Plugin Name of the plugin
+#: anythingmcp-for-woocommerce.php
+msgid "AnythingMCP for WooCommerce"
+msgstr "AnythingMCP for WooCommerce"
+
+#. Plugin URI of the plugin
+#: anythingmcp-for-woocommerce.php
+msgid "https://anythingmcp.com/marketplace/woocommerce"
+msgstr "https://anythingmcp.com/marketplace/woocommerce"
+
+#. Description of the plugin
+#: anythingmcp-for-woocommerce.php
+msgid "Connect your store to Claude, ChatGPT, Microsoft Copilot and Gemini through AnythingMCP. Creates a WooCommerce REST API key and opens the AnythingMCP setup with your store address filled in."
+msgstr "Connectez votre boutique à Claude, ChatGPT, Microsoft Copilot et Gemini via AnythingMCP. Crée une clé d’API REST WooCommerce et ouvre la configuration d’AnythingMCP avec l’adresse de votre boutique déjà remplie."
+
+#. Author of the plugin
+#: anythingmcp-for-woocommerce.php
+msgid "helpcode.ai GmbH"
+msgstr "helpcode.ai GmbH"
+
+#. Author URI of the plugin
+#: anythingmcp-for-woocommerce.php
+msgid "https://helpcode.ai"
+msgstr "https://helpcode.ai"
+
+#: includes/class-amcp-wc-api-keys.php:26
+msgid "Read/Write"
+msgstr "Lecture/Écriture"
+
+#: includes/class-amcp-wc-api-keys.php:27
+msgid "Read"
+msgstr "Lecture"
+
+#: includes/class-amcp-wc-api-keys.php:46
+msgid "Unknown permission level."
+msgstr "Niveau d’autorisation inconnu."
+
+#: includes/class-amcp-wc-api-keys.php:49
+msgid "WooCommerce is not active."
+msgstr "WooCommerce n’est pas actif."
+
+#: includes/class-amcp-wc-api-keys.php:72
+msgid "The API key could not be saved."
+msgstr "La clé d’API n’a pas pu être enregistrée."
+
+#: includes/class-amcp-wc-settings-page.php:20
+msgid "AI Assistants"
+msgstr "Assistants IA"
+
+#: includes/class-amcp-wc-settings-page.php:35
+msgid "Self-hosted AnythingMCP"
+msgstr "AnythingMCP auto-hébergé"
+
+#: includes/class-amcp-wc-settings-page.php:37
+msgid "AnythingMCP is open source. If you run your own instance, enter its address here. Leave it empty to use AnythingMCP Cloud."
+msgstr "AnythingMCP est open source. Si vous exploitez votre propre instance, saisissez ici son adresse. Laissez vide pour utiliser AnythingMCP Cloud."
+
+#: includes/class-amcp-wc-settings-page.php:41
+msgid "Self-hosted AnythingMCP URL"
+msgstr "URL d’AnythingMCP auto-hébergé"
+
+#: includes/class-amcp-wc-settings-page.php:46
+msgid "An https:// address, for example https://mcp.example.com."
+msgstr "Une adresse https://, par exemple https://mcp.example.com."
+
+#: includes/class-amcp-wc-settings-page.php:66
+msgid "The self-hosted AnythingMCP URL must be an https:// address. The previous value was kept."
+msgstr "L’URL d’AnythingMCP auto-hébergé doit être une adresse https://. La valeur précédente a été conservée."
+
+#: includes/class-amcp-wc-settings-page.php:95
+msgid "Copied"
+msgstr "Copié"
+
+#: includes/class-amcp-wc-settings-page.php:96
+msgid "Select the text and copy it by hand."
+msgstr "Sélectionnez le texte et copiez-le à la main."
+
+#: includes/class-amcp-wc-settings-page.php:97
+msgid "The API key could not be created. Reload the page and try again."
+msgstr "La clé d’API n’a pas pu être créée. Rechargez la page et réessayez."
+
+#: includes/class-amcp-wc-settings-page.php:113
+msgid "Use your store in Claude, ChatGPT, Copilot and Gemini"
+msgstr "Utilisez votre boutique dans Claude, ChatGPT, Copilot et Gemini"
+
+#: includes/class-amcp-wc-settings-page.php:115
+msgid "AnythingMCP connects your store to AI assistants such as Claude, ChatGPT, Microsoft Copilot and Gemini. Ask about orders, products, stock and customers in plain language."
+msgstr "AnythingMCP connecte votre boutique à des assistants IA comme Claude, ChatGPT, Microsoft Copilot et Gemini. Posez vos questions sur les commandes, les produits, le stock et les clients en langage courant."
+
+#: includes/class-amcp-wc-settings-page.php:118
+msgid "Your data stays behind your own WooCommerce API key. You can revoke it at any time."
+msgstr "Vos données restent protégées par votre propre clé d’API WooCommerce. Vous pouvez la révoquer à tout moment."
+
+#: includes/class-amcp-wc-settings-page.php:119
+msgid "Read-only by default: the assistant can look things up but not change them."
+msgstr "Lecture seule par défaut : l’assistant peut consulter les données, mais pas les modifier."
+
+#: includes/class-amcp-wc-settings-page.php:120
+msgid "This plugin sends nothing by itself. Your browser opens AnythingMCP only when you click the button below."
+msgstr "Cette extension n’envoie rien d’elle-même. Votre navigateur n’ouvre AnythingMCP que lorsque vous cliquez sur le bouton ci-dessous."
+
+#: includes/class-amcp-wc-settings-page.php:125
+msgid "Store address"
+msgstr "Adresse de la boutique"
+
+#: includes/class-amcp-wc-settings-page.php:129
+msgid "AnythingMCP connects only to stores on https://. Set up HTTPS for this site first."
+msgstr "AnythingMCP se connecte uniquement aux boutiques en https://. Configurez d’abord HTTPS pour ce site."
+
+#: includes/class-amcp-wc-settings-page.php:133
+msgid "The REST API needs pretty permalinks. Choose any structure other than \"Plain\" under Settings → Permalinks."
+msgstr "L’API REST nécessite des permaliens personnalisés. Choisissez une structure autre que « Simple » dans Réglages → Permaliens."
+
+#: includes/class-amcp-wc-settings-page.php:139
+msgid "WooCommerce version"
+msgstr "Version de WooCommerce"
+
+#: includes/class-amcp-wc-settings-page.php:144
+msgid "1. Create an API key"
+msgstr "1. Créer une clé d’API"
+
+#: includes/class-amcp-wc-settings-page.php:146
+msgid "The key belongs to your user and can do what your user can do, limited by the permission you choose."
+msgstr "La clé appartient à votre compte et peut faire ce que votre compte peut faire, dans la limite de l’autorisation choisie."
+
+#: includes/class-amcp-wc-settings-page.php:151
+msgid "Permissions"
+msgstr "Autorisations"
+
+#: includes/class-amcp-wc-settings-page.php:158
+msgid "Read: the assistant can look up orders, products, customers and reports. Read/Write: it can also change prices, stock and orders, and create products and coupons."
+msgstr "Lecture : l’assistant peut consulter les commandes, les produits, les clients et les rapports. Lecture/Écriture : il peut aussi modifier les prix, le stock et les commandes, et créer des produits et des codes promo."
+
+#: includes/class-amcp-wc-settings-page.php:165
+msgid "Create API key"
+msgstr "Créer une clé d’API"
+
+#: includes/class-amcp-wc-settings-page.php:175
+msgid "API key generated successfully."
+msgstr "Clé d’API générée avec succès."
+
+#: includes/class-amcp-wc-settings-page.php:176
+msgid "Make sure to copy your new keys now as the secret key will be hidden once you leave this page."
+msgstr "Copiez vos nouvelles clés dès maintenant : la clé secrète ne sera plus affichée une fois que vous aurez quitté cette page."
+
+#: includes/class-amcp-wc-settings-page.php:181
+msgid "Description"
+msgstr "Description"
+
+#: includes/class-amcp-wc-settings-page.php:185
+msgid "Consumer key"
+msgstr "Clé client"
+
+#: includes/class-amcp-wc-settings-page.php:188
+#: includes/class-amcp-wc-settings-page.php:196
+msgid "Copy"
+msgstr "Copier"
+
+#: includes/class-amcp-wc-settings-page.php:193
+msgid "Consumer secret"
+msgstr "Secret client"
+
+#: includes/class-amcp-wc-settings-page.php:203
+msgid "2. Open AnythingMCP"
+msgstr "2. Ouvrir AnythingMCP"
+
+#: includes/class-amcp-wc-settings-page.php:205
+msgid "Your store address is already filled in. Paste the consumer key and secret there and click \"Check and install\". AnythingMCP then shows how to add your store to Claude, ChatGPT, Copilot or Gemini."
+msgstr "L’adresse de votre boutique est déjà remplie. Collez-y la clé client et le secret client, puis cliquez sur « Check and install ». AnythingMCP vous montre ensuite comment ajouter votre boutique à Claude, ChatGPT, Copilot ou Gemini."
+
+#: includes/class-amcp-wc-settings-page.php:209
+msgid "Open AnythingMCP"
+msgstr "Ouvrir AnythingMCP"
+
+#: includes/class-amcp-wc-settings-page.php:210
+msgid "(opens in a new tab)"
+msgstr "(s’ouvre dans un nouvel onglet)"
+
+#: includes/class-amcp-wc-settings-page.php:214
+msgid "Setup guide"
+msgstr "Guide de configuration"
+
+#: includes/class-amcp-wc-settings-page.php:216
+msgid "Manage or revoke API keys (Advanced → REST API)"
+msgstr "Gérer ou révoquer les clés d’API (Avancé → API REST)"
+
+#: includes/functions.php:62
+msgid "Settings"
+msgstr "Réglages"
+
+#: includes/functions.php:159
+msgid "Use a POST request."
+msgstr "Utilisez une requête POST."
+
+#: includes/functions.php:165
+msgid "You are not allowed to create API keys."
+msgstr "Vous n’êtes pas autorisé à créer des clés d’API."

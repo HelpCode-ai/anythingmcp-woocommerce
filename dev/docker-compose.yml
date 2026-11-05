@@ -1,0 +1,55 @@
+# Throwaway WordPress + WooCommerce for testing the plugin. See dev/setup.sh.
+# The site runs on https://localhost:8443 with a self-signed certificate,
+# because WooCommerce accepts key/secret authentication only over HTTPS.
+name: amcp-wc-dev
+
+services:
+  db:
+    image: mariadb:11.4
+    environment:
+      MARIADB_DATABASE: wordpress
+      MARIADB_USER: wordpress
+      MARIADB_PASSWORD: wordpress
+      MARIADB_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+    command: --innodb-buffer-pool-size=64M --performance-schema=OFF
+
+  wordpress:
+    image: wordpress:php8.2-apache
+    depends_on: [db]
+    ports:
+      - "127.0.0.1:8443:443"
+    environment: &wp-env
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: "1"
+      WORDPRESS_CONFIG_EXTRA: |
+        define( 'WP_DEBUG_LOG', true );
+        define( 'WP_DEBUG_DISPLAY', false );
+        define( 'SCRIPT_DEBUG', true );
+        define( 'WP_ENVIRONMENT_TYPE', 'local' );
+    volumes:
+      - wp:/var/www/html
+      - ../dist/anythingmcp-for-woocommerce:/var/www/html/wp-content/plugins/anythingmcp-for-woocommerce:ro
+      - ./certs/localhost.crt:/etc/ssl/certs/ssl-cert-snakeoil.pem:ro
+      - ./certs/localhost.key:/etc/ssl/private/ssl-cert-snakeoil.key:ro
+    command: bash -c "a2enmod -q ssl && a2ensite -q default-ssl && exec docker-entrypoint.sh apache2-foreground"
+
+  cli:
+    image: wordpress:cli-php8.2
+    depends_on: [wordpress]
+    user: "33:33"
+    environment:
+      <<: *wp-env
+      HOME: /tmp
+    volumes:
+      - wp:/var/www/html
+      - ../dist/anythingmcp-for-woocommerce:/var/www/html/wp-content/plugins/anythingmcp-for-woocommerce:ro
+    profiles: [cli]
+
+volumes:
+  db:
+  wp:

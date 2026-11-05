@@ -1,0 +1,6 @@
+.DS_Store
+/dist/
+/vendor/
+/dev/certs/
+/dev/.env
+/node_modules/

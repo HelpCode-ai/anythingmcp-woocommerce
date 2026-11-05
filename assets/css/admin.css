@@ -1,0 +1,61 @@
+/* AnythingMCP for WooCommerce: WooCommerce → Settings → AI Assistants. */
+
+.amcp-wc {
+	max-width: 960px;
+}
+
+.amcp-wc-lead {
+	font-size: 14px;
+	max-width: 760px;
+}
+
+.amcp-wc-points {
+	list-style: disc;
+	margin-left: 1.5em;
+}
+
+.amcp-wc h3 {
+	margin-top: 2em;
+}
+
+.amcp-wc .form-table th {
+	width: 200px;
+}
+
+.amcp-wc-warning {
+	color: #b32d2e;
+	margin: 0.5em 0 0;
+}
+
+.amcp-wc .spinner {
+	float: none;
+	margin-top: 0;
+	vertical-align: middle;
+}
+
+.amcp-wc #amcp-wc-consumer-key,
+.amcp-wc #amcp-wc-consumer-secret {
+	width: 28em;
+	max-width: 100%;
+}
+
+.amcp-wc-copied {
+	display: inline-block;
+	margin-left: 0.5em;
+	line-height: 30px;
+	vertical-align: middle;
+	color: #008a20;
+}
+
+.amcp-wc-links {
+	margin-top: 1em;
+}
+
+.amcp-wc-links span {
+	margin: 0 0.4em;
+	color: #a7aaad;
+}
+
+.amcp-wc [hidden] {
+	display: none !important;
+}

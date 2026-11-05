@@ -1,0 +1,48 @@
+# Publish a tagged release to the WordPress.org plugin directory.
+#
+# Push a tag that matches "Stable tag" in readme.txt and "Version" in the main
+# plugin file, e.g. `git tag 1.0.1 && git push origin 1.0.1`. Files listed in
+# .distignore stay out of SVN; .wordpress-org/ goes to the SVN assets folder.
+#
+# Repository secrets: SVN_USERNAME and SVN_PASSWORD of the wordpress.org
+# account with commit access to the plugin.
+name: Deploy to WordPress.org
+
+on:
+  push:
+    tags:
+      - "*"
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Check that the tag matches the plugin version
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          version=$(sed -n 's/^ \* Version: *//p' anythingmcp-for-woocommerce.php)
+          stable=$(sed -n 's/^Stable tag: *//p' readme.txt)
+          echo "tag=$tag version=$version stable=$stable"
+          test "$tag" = "$version" && test "$tag" = "$stable"
+
+      - name: Deploy to WordPress.org
+        id: deploy
+        uses: 10up/action-wordpress-plugin-deploy@2.3.0
+        with:
+          generate-zip: true
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: anythingmcp-for-woocommerce
+
+      - name: Attach the zip to a GitHub release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: ${{ steps.deploy.outputs.zip-path }}
