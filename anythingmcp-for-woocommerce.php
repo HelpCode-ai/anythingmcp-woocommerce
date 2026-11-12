@@ -43,7 +43,6 @@ require_once AMCP_WC_DIR . 'includes/class-amcp-wc-api-keys.php';
  * checkout, so it works with HPOS and with the block-based cart and checkout.
  */
 add_action( 'before_woocommerce_init', 'amcp_wc_declare_compatibility' );
-add_action( 'init', 'amcp_wc_load_textdomain' );
 add_filter( 'woocommerce_get_settings_pages', 'amcp_wc_add_settings_page' );
 add_action( 'wp_ajax_amcp_wc_create_key', 'amcp_wc_ajax_create_key' );
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'amcp_wc_plugin_action_links' );

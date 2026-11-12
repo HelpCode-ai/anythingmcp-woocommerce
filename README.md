@@ -28,7 +28,7 @@ dev/wp.sh plugin check anythingmcp-for-woocommerce --require=./wp-content/plugin
 docker compose -f dev/docker-compose.yml down -v   # stop and delete everything
 ```
 
-`dev/build.sh` compiles the translations and writes `dist/anythingmcp-for-woocommerce/` and
+`dev/build.sh` writes `dist/anythingmcp-for-woocommerce/` and
 `dist/anythingmcp-for-woocommerce-<version>.zip` with the files `.distignore` leaves in. Run it again
 after every change; the site uses `dist/`.
 
@@ -39,7 +39,9 @@ Coding standards: `phpcs` with WordPress Coding Standards 3 and PHPCompatibility
 
 `languages/anythingmcp-for-woocommerce.pot` comes from
 `wp i18n make-pot . languages/anythingmcp-for-woocommerce.pot --exclude=dev,dist,.github,.wordpress-org,vendor`.
-Update the `.po` files with `msgmerge`; `dev/build.sh` compiles the `.mo` files.
+Translations are managed on translate.wordpress.org; the plugin ships no `.po`/`.mo` files and
+WordPress loads the language packs itself. `dev/translations/` keeps the German, Italian, Spanish
+and French `.po` files written before the first release, to import there once the plugin is live.
 
 ## Release
 

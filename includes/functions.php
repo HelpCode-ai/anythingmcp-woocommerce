@@ -24,17 +24,6 @@ function amcp_wc_declare_compatibility() {
 }
 
 /**
- * Load the translations shipped with the plugin.
- *
- * Language packs from translate.wordpress.org in wp-content/languages take
- * precedence; the bundled files cover the languages translated before release.
- */
-function amcp_wc_load_textdomain() {
-	// phpcs:ignore PluginCheck.CodeAnalysis.DiscouragedFunctions.load_plugin_textdomainFound -- Bundled translations for de_DE, it_IT, es_ES and fr_FR.
-	load_plugin_textdomain( 'anythingmcp-for-woocommerce', false, dirname( plugin_basename( AMCP_WC_FILE ) ) . '/languages' );
-}
-
-/**
  * Add the "AI Assistants" tab to WooCommerce → Settings.
  *
  * @param WC_Settings_Page[] $pages Settings pages.
