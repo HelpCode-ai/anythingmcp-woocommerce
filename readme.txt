@@ -100,4 +100,4 @@ AnythingMCP connects only to stores on HTTPS, because the key is sent with every
 == Changelog ==
 
 = 1.0.0 =
-* First release: AI Assistants tab, API key creation (Read or Read/Write), Open AnythingMCP with the store address filled in, self-hosted AnythingMCP URL, translations for German, Italian, Spanish and French.
+* First release: AI Assistants tab, API key creation (Read or Read/Write), Open AnythingMCP with the store address filled in, self-hosted AnythingMCP URL.
