@@ -14,7 +14,7 @@
  * Text Domain:          anythingmcp-for-woocommerce
  * Domain Path:          /languages
  * WC requires at least: 8.0
- * WC tested up to:      11.2
+ * WC tested up to:      11.3
  *
  * @package AnythingMCP_For_WooCommerce
  */
