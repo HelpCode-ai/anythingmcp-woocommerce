@@ -13,7 +13,10 @@ Use a WooCommerce store in Claude, ChatGPT, Copilot and Gemini. This WordPress p
 The plugin makes no remote requests and stores one option (`amcp_wc_anythingmcp_url`, the address of
 a self-hosted AnythingMCP; empty means `https://cloud.anythingmcp.com`).
 
-The WordPress.org description is in [readme.txt](readme.txt).
+Install it from the WordPress.org plugin directory:
+[wordpress.org/plugins/anythingmcp-for-woocommerce](https://wordpress.org/plugins/anythingmcp-for-woocommerce/),
+or search for "AnythingMCP" under *Plugins → Add New*. The directory page is written in
+[readme.txt](readme.txt).
 
 ## Development
 
